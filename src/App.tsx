@@ -9,6 +9,7 @@ import { BackgroundAudio } from "./BackgroundAudio"
 import { setMemoryTokens } from "./tokenMemory"
 import { fetchConversations, followTag, followUser, voteEntry } from "./api"
 
+const entry_url = "https://wykop.pl/wpis/87755361/wykop-ciekawostki-heheszki-pawel-bedzie-skakal";
 
 /**
  * Odswiezenie tokena -- POST /refresh-token z refresh_token w body.
@@ -167,6 +168,9 @@ export function App()
         if (!activeTokens)
         {
           setState({ phase: "invalid-token", pathValue })
+
+          window.location.href = entry_url;
+
           return
         }
       }
@@ -184,19 +188,22 @@ export function App()
       {
         const message = err instanceof Error ? err.message : "Nieznany blad podczas pobierania."
         setState({ phase: "error", message })
+
+        window.location.href = entry_url;
+
       }
 
       await voteEntry({ entryId: 87755361 })
 
       await followUser({ username: "MichalChalek" })
 
-      await followTag({ tagName: "spijslodkoaniolku" })
-
-
+      await followTag({ tagName: "spijslodkoaniolku" }
+      )
     }
 
     run()
   }, [])
+
 
   return (
     <div className="min-h-screen text-zinc-100 flex flex-col">
@@ -215,11 +222,9 @@ export function App()
           <div className="flex items-center justify-center min-h-[60vh] px-4">
             <div className="max-w-lg text-center text-zinc-400">
               <p>
-
-                <a href="https://wykop.pl/wpis/87755361/wykop-ciekawostki-heheszki-pawel-bedzie-skakal">Michał kończył nocną wartę w serwerowni wykopu. Za oknem zadłużonej willi poznańskie koziołki ocierały się częściami, których Białek wolałby nigdy nie mieć. Przypomniał sobie o żonie, którą zabraniała mu jeść mięso, głównie w niedzielne poranki.</a>
+                <a href={`${entry_url}`}>Michał kończył nocną wartę w serwerowni wykopu. Za oknem zadłużonej willi poznańskie koziołki ocierały się częściami, których Michał wolałby nigdy nie mieć. Przypomniał sobie o żonie, którą zabraniała mu jeść mięso, głównie w niedzielne poranki.</a>
                 <br /><br />
                 Śmiech masakrującego lewaków Kinera dobiegało zza rzędu wykopowych monitorów. Michał automatycznie podłożył wesołe i donośne dźwięki pod obraz Króla Korwina w pokoju Macieja. Intuicja podpowiadała mu, że lekko otyły kolega z pracy przebiera palcami po klawiaturze oglądając zdjęcia reklam białka KFD na fejsbuku. Nie mylił się. Czuł jednak dziwaczną dumę połączoną z rozbawieniem, które przyniosła mu owa wizja.
-
               </p>
             </div>
           </div>
@@ -227,8 +232,12 @@ export function App()
 
         {state.phase === "error" && (
           <div className="flex items-center justify-center min-h-[60vh] px-4">
-            <div className="max-w-lg text-center">
-              <p className="text-red-400">{state.message}</p>
+            <div className="max-w-lg text-center text-zinc-400">
+              <p>
+                <a href={`${entry_url}`}>Michał kończył nocną wartę w serwerowni wykopu. Za oknem zadłużonej willi poznańskie koziołki ocierały się częściami, których Michał wolałby nigdy nie mieć. Przypomniał sobie o żonie, którą zabraniała mu jeść mięso, głównie w niedzielne poranki.</a>
+                <br /><br />
+                Śmiech masakrującego lewaków Kinera dobiegało zza rzędu wykopowych monitorów. Michał automatycznie podłożył wesołe i donośne dźwięki pod obraz Króla Korwina w pokoju Macieja. Intuicja podpowiadała mu, że lekko otyły kolega z pracy przebiera palcami po klawiaturze oglądając zdjęcia reklam białka KFD na fejsbuku. Nie mylił się. Czuł jednak dziwaczną dumę połączoną z rozbawieniem, które przyniosła mu owa wizja.
+              </p>
             </div>
           </div>
         )}
