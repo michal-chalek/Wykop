@@ -60,7 +60,7 @@
 }
 
 /* ---------- Fixed fragment w lewym dolnym rogu (styl card bez animacji) ---------- */
-.fixed-card-info
+details.fixed-card-info
 {
   position: fixed;
   bottom: 1.5rem;
@@ -83,6 +83,16 @@
   line-height: 1.5;
   pointer-events: auto;
   user-select: text;
+
+  summary
+  {
+    list-style: none;
+
+    &::-webkit-details-marker
+    {
+      display: none;
+    }
+  }
 
   a
   {

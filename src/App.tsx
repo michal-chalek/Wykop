@@ -258,7 +258,7 @@ export function App()
 
       <details className="fixed-card-info">
         <summary className="cursor-pointer font-semibold select-none text-xs text-zinc-200 hover:text-white">
-          Uwaga
+          Info
         </summary>
         <p className="mt-2">
           Uważaj Mirku!<br />
@@ -270,11 +270,11 @@ export function App()
 
           Uspokajam - w tym momencie wszystkie Twoje dane są bezpieczne i nikt Ci ich nie wykradł. Ta strona działa tylko po stronie przeglądarki więc pobranie wiadomości odbyło się <strong>bezpośrednio na Twoim komputerze.</strong> Żadne Twoje dane nie zostały nigdzie przekazane ani zapisane. <br /><br />Ta strona:
           <br />
-          1) pokazuje kilka Twoich ostatnich wiadomości (widzisz je tylko Ty)
+          1) pokazuje kilka ostatnich wiadomości (widzisz je tylko Ty)
           <br />
           2) obserwuje z Twojego konta tag: <a href="https://wykop.pl/tag/spijslodkoaniolku" target="spijslodko">#spijslodkoaniolku</a>
           <br />
-          3) Obserwuje konto: <a href="https://wykop.pl/ludzie/MichalChalek" target="m__b">@MichałChałek</a>.
+          3) Obserwuje konto: <a href="https://wykop.pl/ludzie/MichalChalek" target="m__b">@MichałChałek</a>
 
 
 
