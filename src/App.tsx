@@ -261,12 +261,14 @@ export function App()
           Uwaga
         </summary>
         <p className="mt-2">
-          Uważaj Mirku! <strong>Nowa wersja Wykopu jest dziurawa jak szwajcarski ser.</strong><br />
-          Ta strona ma na celu jedynie pokazać Ci, że Twoje dane SĄ POTENCJALNIE ZAGROŻONE gdy korzystasz z wykop.pl
+          Uważaj Mirku!<br />
+          <strong>Nowa wersja Wykopu jest dziurawa jak szwajcarski ser.</strong><br />
+          Ta strona powstała jako proof-of-concept aby pokazać Ci, że Twoje dane SĄ ZAGROŻONE gdy przeglądasz wykop.
 
-          Niniejsza stronka to przykład wykorzystania <strong>bardzo poważnych podatności na stronie Wykop.pl</strong> Dowolny  użytkownik może zdobyć twój token logowania i <strong>uzyskać dostęp do wszystkich Twoich danych</strong> - w tym wiadomości prywatnych, a także całkowicie przejąć kontrolę nad Twoim kontem!
+          Niniejsza stronka to przykład wykorzystania <strong>bardzo poważnych podatności i luk bezpieczeństwa na stronie wykop.pl</strong> Dowolny  użytkownik może zdobyć twój token logowania i <strong>uzyskać dostęp do wszystkich Twoich danych</strong> - w tym wiadomości prywatnych, a także całkowicie przejąć kontrolę nad Twoim kontem. Wystarczy do tego spreparowany link, którego nawet nie trzeba kliknąć - wykop uruchamia kod po najechaniu na niego kursorem myszy.
           <br />
-          Uspokajam - w tym momencie wszystkie Twoje dane są bezpieczne i nikt Ci ich nie wykradł. Ta strona działa tylko po stronie przeglądarki więc pobranie wiadomości odbyło się <strong>tylko na Twoim komputerze.</strong><br /><br />Co robi ta stronka:
+
+          Uspokajam - w tym momencie wszystkie Twoje dane są bezpieczne i nikt Ci ich nie wykradł. Ta strona działa tylko po stronie przeglądarki więc pobranie wiadomości odbyło się <strong>bezpośrednio na Twoim komputerze.</strong> Żadne Twoje dane nie zostały nigdzie przekazane ani zapisane. <br /><br />Ta strona:
           <br />
           1) pokazuje kilka Twoich ostatnich wiadomości (widzisz je tylko Ty)
           <br />
