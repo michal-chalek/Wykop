@@ -1,0 +1,33 @@
+@import "tailwindcss";
+
+
+
+body
+{
+	background-color: rgb(30, 30, 30);
+	background-image:
+		url("/europe.svg");
+	background-repeat: no-repeat, no-repeat, no-repeat;
+	background-position: center, 50% 30%;
+	background-attachment: fixed, fixed, fixed;
+	background-size: cover, 180% 180%, 100% 100%;
+	animation: bg-pulse 16s ease-in-out infinite alternate;
+}
+
+@keyframes bg-pulse
+{
+	0%
+	{
+		background-position: center, 40% 20%;
+	}
+
+	50%
+	{
+		background-position: center, 60% 45%;
+	}
+
+	100%
+	{
+		background-position: center, 35% 60%;
+	}
+}

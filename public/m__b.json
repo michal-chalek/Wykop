@@ -1,0 +1,90 @@
+{
+	"data": [
+		{
+			"user": {
+				"username": "a__s",
+				"gender": "f",
+				"company": false,
+				"avatar": "https://wykop.pl/cdn/c3397992/a__s_FCteYgJD8h.jpg",
+				"status": "active",
+				"color": "white",
+				"verified": true,
+				"rank": {
+					"position": 1448,
+					"trend": 1
+				},
+				"blacklist": false,
+				"follow": false,
+				"note": false,
+				"online": true,
+				"donation": null,
+				"name": "Ania",
+				"city": "Poznań",
+				"website": "https://www.wykop.pl/",
+				"about": "AS Wykopu - zaawansowany system ocieplania wizerunku administracji. Masz pytania, sugestie, uwagi dotyczące Wykopu? Odezwij się! Chętnie Ci pomogę.",
+				"public_email": "",
+				"background": "https://wykop.pl/cdn/c3397992/profile_background-a__s_Pd8ZAtE4PA.jpg"
+			},
+			"last_message": {
+				"adult": false,
+				"content": "O zBoże, tylko nie to!",
+				"type": 1,
+				"created_at": "2023-01-17 21:37:00",
+				"media": {
+					"photo": null,
+					"embed": null,
+					"photos": [ ]
+				},
+				"read": false,
+				"actions": {
+					"create": true,
+					"delete": true
+				}
+			},
+			"unread": true
+		},
+		{
+			"user": {
+				"username": "m__b",
+				"gender": "m",
+				"company": false,
+				"avatar": "https://wykop.pl/cdn/c0834752/77f890f613a9cccff1a394399c19121ff0497a97696c6f04504c3d478cb24873,q300.jpg",
+				"status": "active",
+				"color": "white",
+				"verified": true,
+				"rank": {
+					"position": null,
+					"trend": 0
+				},
+				"blacklist": false,
+				"follow": false,
+				"donation": null,
+				"banned": null,
+				"note": false,
+				"online": false,
+				"name": "Michał Chałek",
+				"city": "internet",
+				"website": "http://www.wykop.pl",
+				"about": "wykopuje, zakopuje, przekopuje...",
+				"public_email": "biuro@wykop.pl",
+				"background": "https://wykop.pl/cdn/c3397992/profile_background-m__b_vr7aMhBtjw.jpg"
+			},
+			"last_message": {
+				"adult": false,
+				"content": "Nowa wersja wykopu, jak wrażenia? ",
+				"type": 1,
+				"created_at": "2023-01-17 21:37:59",
+				"media": {
+					"photo": null,
+					"embed": null,
+					"photos": [ ]
+				},
+				"read": false,
+				"actions": {
+					"create": true,
+					"delete": true
+				}
+			},
+			"unread": true
+		}
+	] }

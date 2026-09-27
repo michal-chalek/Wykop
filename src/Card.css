@@ -1,0 +1,294 @@
+/* ===================================================================
+   Card.css
+   Style karty konwersacji -- wersja plaska i wersja 3D (glassmorphism).
+   =================================================================== */
+
+/* ---------- Bazowy styl karty ---------- */
+.card-item
+{
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid #27272a;
+}
+
+.card-item.unread
+{
+  background-color: rgba(39, 39, 42, 0.5);
+}
+
+/* ---------- Glassmorphism: tryb 3D ---------- */
+.card-item.card-3d
+{
+  width: 320px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 16px;
+  background: rgba(24, 24, 27, 0.72);
+  backdrop-filter: blur(14px) saturate(1.3);
+  -webkit-backdrop-filter: blur(14px) saturate(1.3);
+  box-shadow:
+    0 16px 36px -10px rgba(0, 0, 0, 0.6),
+    0 0 0 1px rgba(255, 255, 255, 0.05) inset;
+  padding: 0.85rem 1rem;
+  transition:
+    border-color 0.35s ease,
+    box-shadow 0.35s ease,
+    background 0.35s ease;
+}
+
+.card-item.card-3d.unread
+{
+  background: rgba(30, 30, 34, 0.78);
+  border-color: rgba(59, 130, 246, 0.25);
+  box-shadow:
+    0 16px 36px -10px rgba(0, 0, 0, 0.6),
+    0 0 12px -4px rgba(59, 130, 246, 0.15),
+    0 0 0 1px rgba(59, 130, 246, 0.12) inset;
+}
+
+/* Hover na karcie 3D */
+.card-3d-wrapper:hover .card-item.card-3d
+{
+  border-color: rgba(255, 255, 255, 0.28);
+  box-shadow:
+    0 20px 44px -10px rgba(0, 0, 0, 0.7),
+    0 0 20px -4px rgba(161, 140, 209, 0.18),
+    0 0 0 1px rgba(255, 255, 255, 0.14) inset;
+  background: rgba(34, 34, 38, 0.82);
+}
+
+/* ---------- Fixed fragment w lewym dolnym rogu (styl card bez animacji) ---------- */
+.fixed-card-info
+{
+  position: fixed;
+  bottom: 1.5rem;
+  left: 1.5rem;
+  z-index: 2200;
+  width: max-content;
+  max-width: 400px;
+  box-sizing: border-box;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 16px;
+  background: rgba(24, 24, 27, 0.72);
+  backdrop-filter: blur(14px) saturate(1.3);
+  -webkit-backdrop-filter: blur(14px) saturate(1.3);
+  box-shadow:
+    0 16px 36px -10px rgba(0, 0, 0, 0.6),
+    0 0 0 1px rgba(255, 255, 255, 0.05) inset;
+  padding: 1rem 1.25rem;
+  color: #d4d4d8;
+  font-size: 0.8rem;
+  line-height: 1.5;
+  pointer-events: auto;
+  user-select: text;
+
+  a
+  {
+    text-decoration: underline;
+  }
+}
+
+.fixed-card-info[open]
+{}
+
+
+/* Aktywna karta 3D */
+.card-3d-wrapper.active .card-item.card-3d
+{
+  width: 380px;
+  flex-wrap: wrap;
+  border-color: rgba(161, 140, 209, 0.45);
+  box-shadow:
+    0 24px 54px -12px rgba(0, 0, 0, 0.75),
+    0 0 28px -4px rgba(161, 140, 209, 0.22),
+    0 0 0 1px rgba(161, 140, 209, 0.18) inset;
+  background: rgba(38, 38, 42, 0.88);
+}
+
+
+/* ---------- Awatar ---------- */
+.card-avatar
+{
+  width: 3rem;
+  height: 3rem;
+  border-radius: 9999px;
+  flex-shrink: 0;
+  object-fit: cover;
+  background-color: #3f3f46;
+}
+
+/* ---------- Tresc ---------- */
+.card-body
+{
+  min-width: 0;
+  flex: 1 1 0%;
+}
+
+.card-header
+{
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.card-username
+{
+  font-weight: 600;
+  color: #f4f4f5;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.card-online-dot
+{
+  width: 0.45rem;
+  height: 0.45rem;
+  border-radius: 9999px;
+  background-color: #22c55e;
+  flex-shrink: 0;
+  box-shadow: 0 0 6px rgba(34, 197, 94, 0.5);
+}
+
+.card-unread-dot
+{
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 9999px;
+  background-color: #3b82f6;
+  flex-shrink: 0;
+}
+
+
+
+.card-message
+{
+  font-size: 0.875rem;
+  color: #a1a1aa;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin-top: 0.125rem;
+}
+
+
+.card-date,
+.card-time
+{
+  margin-left: auto;
+  font-size: 0.72rem;
+  color: #71717a;
+  white-space: nowrap;
+}
+
+.card-time
+{
+  display: flex;
+}
+
+.card-date
+{
+  display: none;
+}
+
+.card-3d-wrapper.active
+{
+  .card-message
+  {
+    white-space: wrap;
+  }
+
+  .card-actions
+  {
+    display: flex;
+  }
+
+  .card-date
+  {
+    display: flex;
+  }
+
+  .card-time
+  {
+    display: none;
+  }
+}
+
+/* Domyślnie kontener akcji (input + button) jest ukryty */
+.card-actions
+{
+  display: none;
+  align-items: center;
+  gap: 0.5rem;
+  width: 100%;
+  margin-top: 0.5rem;
+}
+
+.card-action-input
+{
+  flex: 1;
+  min-width: 0;
+  padding: 0.4rem 0.65rem;
+  font-size: 0.8rem;
+  color: #f4f4f5;
+  background: rgba(0, 0, 0, 0.45);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 8px;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card-action-input:focus
+{
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 1px #3b82f6;
+}
+
+.card-action-input:disabled
+{
+  opacity: 0.55;
+  cursor: not-allowed;
+  background: rgba(0, 0, 0, 0.25);
+}
+
+.card-action-btn
+{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.4rem 0.85rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #ffffff;
+  background: #4467a1;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+  transition: all 0.2s ease;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.card-action-btn:hover:not(:disabled)
+{
+  background: #2f79f1;
+  box-shadow: 0 6px 16px rgba(37, 99, 235, 0.45);
+}
+
+.card-action-btn:active:not(:disabled)
+{
+  transform: translateY(0);
+}
+
+.card-action-btn:disabled
+{
+  opacity: 0.55;
+  cursor: not-allowed;
+  background: #3f3f46;
+  border-color: rgba(255, 255, 255, 0.08);
+  box-shadow: none;
+  transform: none;
+}

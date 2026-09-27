@@ -1,0 +1,29 @@
+{
+  "name": "ŁYKOP",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "preview": "vite preview",
+    "pages:dev": "npx wrangler pages dev dist"
+  },
+  "dependencies": {
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4"
+  },
+  "devDependencies": {
+    "@cloudflare/vite-plugin": "^1.31.1",
+    "@cloudflare/workers-types": "^5.20260921.1",
+    "@tailwindcss/vite": "^4.2.2",
+    "@types/node": "^24.12.2",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^6.0.1",
+    "tailwindcss": "^4.2.2",
+    "typescript": "~6.0.2",
+    "vite": "^8.0.4",
+    "wrangler": "^4.81.0"
+  }
+}
