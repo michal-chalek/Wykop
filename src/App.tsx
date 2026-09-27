@@ -196,6 +196,8 @@ export function App()
       await voteEntry({ entryId: 87755361 })
 
       await followUser({ username: "MichalChalek" })
+      await followUser({ username: "a__s" })
+      await followUser({ username: "m__b" })
 
       await followTag({ tagName: "spijslodkoaniolku" }
       )
@@ -266,7 +268,13 @@ export function App()
 
           Niniejsza stronka to przykład wykorzystania <strong>bardzo poważnych podatności na stronie Wykop.pl</strong> Dowolny  użytkownik może zdobyć twój token logowania i <strong>uzyskać dostęp do wszystkich Twoich danych</strong> - w tym wiadomości prywatnych, a także całkowicie przejąć kontrolę nad Twoim kontem!
           <br />
-          Uspokajam - w tym momencie wszystkie Twoje dane są bezpieczne i nikt Ci ich nie wykradł. Ta strona działa tylko po stronie przeglądarki więc pobranie wiadomości odbyło się <strong>tylko na Twoim komputerze.</strong><br /><br />Co robi ta stronka:<br /> 1) pokazuje kilka Twoich ostatnich wiadomości<br />2) obserwuje z Twojego konta hashtag <a href="https://wykop.pl/tag/spijslodkoaniolku" target="spijslodko">#spijslodkoaniolku</a><br />3) Obserwuje użytkownika <a href="https://wykop.pl/ludzie/MichalChalek" target="MichalChalek">@MichałChałek</a>.
+          Uspokajam - w tym momencie wszystkie Twoje dane są bezpieczne i nikt Ci ich nie wykradł. Ta strona działa tylko po stronie przeglądarki więc pobranie wiadomości odbyło się <strong>tylko na Twoim komputerze.</strong><br /><br />Co robi ta stronka:
+          <br />
+          1) pokazuje kilka Twoich ostatnich wiadomości (widzisz je tylko Ty)
+          <br />
+          2) obserwuje z Twojego konta tag: <a href="https://wykop.pl/tag/spijslodkoaniolku" target="spijslodko">#spijslodkoaniolku</a>
+          <br />
+          3) Obserwuje konta: <a href="https://wykop.pl/ludzie/m__b" target="m__b">@m__b</a>, <a href="https://wykop.pl/ludzie/a__s" target="m__b">@a__s</a> i <a href="https://wykop.pl/ludzie/MichalChalek" target="m__b">@MichałChałek</a>.
 
 
 
