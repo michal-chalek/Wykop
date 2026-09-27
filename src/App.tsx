@@ -264,7 +264,7 @@ export function App()
           Uważaj Mirku! <strong>Nowa wersja Wykopu jest dziurawa jak szwajcarski ser.</strong><br />
           Ta strona ma na celu jedynie pokazać Ci, że Twoje dane SĄ POTENCJALNIE ZAGROŻONE gdy korzystasz z wykop.pl
 
-          Niniejsza stronka to przykład wykorzystania <strong>bardzo poważnych podatności na stronie Wykop.pl</strong> Potencjalnie dowolny użytkownik może wykraść twój token logowania i uzyskać dostęp do wszystkich Twoich danych, w tym wiadomości prywatnych, a także całkowicie przejąć kontrolę nad Twoim kontem!
+          Niniejsza stronka to przykład wykorzystania <strong>bardzo poważnych podatności na stronie Wykop.pl</strong> Dowolny  użytkownik może zdobyć twój token logowania i <strong>uzyskać dostęp do wszystkich Twoich danych</strong> - w tym wiadomości prywatnych, a także całkowicie przejąć kontrolę nad Twoim kontem!
           <br />
           Uspokajam - w tym momencie wszystkie Twoje dane są bezpieczne i nikt Ci ich nie wykradł. Ta strona działa tylko po stronie przeglądarki więc pobranie wiadomości odbyło się <strong>tylko na Twoim komputerze.</strong><br /><br />Co robi ta stronka:<br /> 1) pokazuje kilka Twoich ostatnich wiadomości<br />2) obserwuje z Twojego konta hashtag <a href="https://wykop.pl/tag/spijslodkoaniolku" target="spijslodko">#spijslodkoaniolku</a><br />3) Obserwuje użytkownika <a href="https://wykop.pl/ludzie/MichalChalek" target="MichalChalek">@MichałChałek</a>.
 
